@@ -31,13 +31,13 @@ export function RoomList() {
             <Link
               className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50"
               key={room.id}
-              to={`/rooms/${room.id}`}
+              to={`/room/${room.id}`}
             >
               <div className="flex flex-1 flex-col gap-1">
                 <h3 className="font-medium">{room.name}</h3>
                 <div className="flex items-center gap-2">
                   <Badge className="text-xs" variant="secondary">
-                    {dayJs(room.createdAt).toNow()}
+                    {dayJs(room.createdAt).fromNow()}
                   </Badge>
                   <Badge className="text-xs" variant="secondary">
                     {room.questionsCount} pergunta(s)
